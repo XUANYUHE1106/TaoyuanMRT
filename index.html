@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="He Xuanyu">
+    <meta name="description" content="這是Taoyuan MRT guiding的branch">
+    <title>桃園捷運路線圖</title>
+    <link rel="stylesheet" href="排版.css">
+</head>
+<body>
+    <div class="nav-bar"> 
+        <div class="menu">         
+            <div class="menu-item">
+            <a href="https://sites.google.com/view/tourist-partner/home-page" class="menu-item">
+                <b><i>Home</i></b>
+            </a>    
+            </div>   
+            <div class="menu-item">
+                <b><i>About</i></b>
+            </div>  
+        </div>
+    </div>
+    <div class="sidebar">
+        <a href="Taoyuan%20future%20MRT.html">路線圖(全)</a>
+        <a href="綠線.html">捷運綠線</a>
+        <a href="機場線.html">捷運機場線</a>
+    </div>
+    <p class="header" style="margin-right: 15%;"><b>桃園捷運路線圖</b></p>
+    <div class="map-wrapper">
+        <img src="桃園捷運路線圖_1131128.jpg" alt="桃園捷運路線圖" width="800px" >
+    </div>
+    <div style="clear: both;"></div>
+    <div class="imgGuide">
+        <a href="桃園捷運路線圖_1131128.jpg">圖片預覽</a>
+    </div>
+    
+    <button id="backToTop" title="回到最上方">↑</button>
+    <script>
+  
+        window.addEventListener("scroll", function () {
+            const btn = document.getElementById("backToTop");
+            if (window.scrollY > 300) {
+                btn.style.display = "block";
+            } 
+            else {
+                btn.style.display = "none";
+            }
+            }
+        );
+        document.getElementById("backToTop").addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+</script>
+
+</body>
+</html>
