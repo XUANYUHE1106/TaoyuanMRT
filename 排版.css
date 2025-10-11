@@ -1,6 +1,12 @@
+body, html { /* 清除預設空隙*/
+  margin: 0;
+  padding: 0;
+}
 .nav-bar{
   background: #333;
   padding: 20px;
+  width: 100%;
+  box-sizing: border-box; 
 }
 
 .menu {
@@ -190,4 +196,5 @@
 .greentable{
  margin-left: 360px;
  font-family:"DFKai-SB";
+
 }
