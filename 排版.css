@@ -196,5 +196,19 @@ body, html { /* 清除預設空隙*/
 .greentable{
  margin-left: 360px;
  font-family:"DFKai-SB";
-
 }
+
+.site-footer {
+    background-color: #2E8B57;) 
+    color: white;
+    padding: 40px 0;  
+    width: 100%;         
+    text-align: center; 
+}
+
+.site-footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
