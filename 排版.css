@@ -199,7 +199,7 @@ body, html { /* 清除預設空隙*/
 }
 
 .site-footer {
-    background-color:black;) 
+    background-color:black;
     color: white;
     padding: 40px 0;  
     width: 100%;         
@@ -211,5 +211,6 @@ body, html { /* 清除預設空隙*/
     text-decoration: none;
     margin: 0 10px;
 }
+
 
 
