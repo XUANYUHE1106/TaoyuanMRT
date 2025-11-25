@@ -1,0 +1,51 @@
+
+.cursor {
+    display: inline-block;
+    color: #f00093;
+    font-weight: 900;
+    animation: blink 1s steps(1, end) infinite;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+  color: #f00093;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+}
+.typewriter-container {
+      display: inline-block; /* 讓容器寬度隨內容變化 */
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+/*提示詞*/
+.hint {
+  position: fixed;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: monospace;
+  font-size: 1rem;
+  color: #f00093;       
+  opacity: 0;        /* 預設完全透明 (隱藏) */
+  transition: opacity 1s; /* 淡入效果 */
+  pointer-events: none;   /* 讓點擊可以穿透文字 */
+}
+
+/* JS 會加上這個 class 讓它顯示並閃爍 */
+.hint.show {
+  opacity: 1;
+  animation: blinkHint 2s infinite;
+}
+
+@keyframes blinkHint {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
