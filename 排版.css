@@ -197,7 +197,6 @@ body, html { /* 清除預設空隙*/
  margin-left: 360px;
  font-family:"DFKai-SB";
 }
-
 .site-footer {
     background-color:black;
     color: white;
@@ -205,12 +204,12 @@ body, html { /* 清除預設空隙*/
     width: 100%;         
     text-align: center; 
 }
-
 .site-footer a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
 }
+
 
 
 
