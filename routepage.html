@@ -48,19 +48,29 @@
 const themeToggleBtn = document.getElementById('theme-toggle');
 const body = document.body;
 
+// 取得按鈕與 body
+const themeToggleBtn = document.getElementById('theme-toggle');
+const body = document.body;
+
+// 1. 檢查使用者之前有沒有存過設定 (LocalStorage)
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme === 'dark') {
     body.classList.add('dark-mode');
-    themeToggleBtn.textContent = '☀️';
+    themeToggleBtn.textContent = '☀️'; // 如果是深色，按鈕顯示太陽
 }
+
+// 2. 按鈕點擊事件
 themeToggleBtn.addEventListener('click', function() {
+    // 切換 dark-mode class
     body.classList.toggle('dark-mode');
+    
+    // 判斷目前是否為深色模式
     if (body.classList.contains('dark-mode')) {
-        themeToggleBtn.textContent = '☀️'; 
-        localStorage.setItem('theme', 'dark'); 
+        themeToggleBtn.textContent = '☀️'; // 變亮
+        localStorage.setItem('theme', 'dark'); // 記憶設定
     } else {
-        themeToggleBtn.textContent = '🌙'; 
-        localStorage.setItem('theme', 'light'); 
+        themeToggleBtn.textContent = '🌙'; // 變暗
+        localStorage.setItem('theme', 'light'); // 記憶設定
     }
 });
          window.addEventListener("scroll", function ){
@@ -80,5 +90,6 @@ themeToggleBtn.addEventListener('click', function() {
 
 </body>
 </html>
+
 
 
