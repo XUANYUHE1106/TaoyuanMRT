@@ -51,7 +51,22 @@ const body = document.body;
 // 取得按鈕與 body
 const themeToggleBtn = document.getElementById('theme-toggle');
 const body = document.body;
-
+         window.addEventListener("scroll", function ){
+            const btn = document.getElementById("backToTop");
+            if (window.scrollY > 300) {
+                btn.style.display = "block";
+            } 
+            else {
+                btn.style.display = "none";
+            }
+            }
+        );
+        document.getElementById("backToTop").addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+</script>
+    <script>
+        
 // 1. 檢查使用者之前有沒有存過設定 (LocalStorage)
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme === 'dark') {
@@ -73,23 +88,11 @@ themeToggleBtn.addEventListener('click', function() {
         localStorage.setItem('theme', 'light'); // 記憶設定
     }
 });
-         window.addEventListener("scroll", function ){
-            const btn = document.getElementById("backToTop");
-            if (window.scrollY > 300) {
-                btn.style.display = "block";
-            } 
-            else {
-                btn.style.display = "none";
-            }
-            }
-        );
-        document.getElementById("backToTop").addEventListener("click", function () {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-</script>
+    </script>
 
 </body>
 </html>
+
 
 
 
