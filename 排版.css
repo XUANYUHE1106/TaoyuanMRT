@@ -209,6 +209,15 @@ body, html { /* 清除預設空隙*/
     text-decoration: none;
     margin: 0 10px;
 }
+.map-wrapper img {
+    max-width: 100%;
+    height: auto; /* 保持比例 */
+    display: block;
+    margin: 0 auto; /* 置中 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 加點陰影增加立體感 */
+    border-radius: 8px; /* 圓角 */
+}
+
 
 
 
