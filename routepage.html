@@ -18,7 +18,10 @@
             </div>   
             <div class="menu-item">
                 <b><i>About</i></b>
-            </div>  
+            </div> 
+            <button id="theme-toggle" class="menu-item" style="background:none; border:none; font-family: inherit;">
+            🌙
+            </button>
         </div>
     </div>
     <div class="sidebar">
@@ -42,8 +45,25 @@
     
     <button id="backToTop" title="回到最上方">↑</button>
     <script>
-  
-        window.addEventListener("scroll", function () {
+const themeToggleBtn = document.getElementById('theme-toggle');
+const body = document.body;
+
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+    body.classList.add('dark-mode');
+    themeToggleBtn.textContent = '☀️';
+}
+themeToggleBtn.addEventListener('click', function() {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        themeToggleBtn.textContent = '☀️'; 
+        localStorage.setItem('theme', 'dark'); 
+    } else {
+        themeToggleBtn.textContent = '🌙'; 
+        localStorage.setItem('theme', 'light'); 
+    }
+});
+         window.addEventListener("scroll", function ){
             const btn = document.getElementById("backToTop");
             if (window.scrollY > 300) {
                 btn.style.display = "block";
@@ -60,3 +80,4 @@
 
 </body>
 </html>
+
