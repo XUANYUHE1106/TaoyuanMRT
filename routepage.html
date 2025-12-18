@@ -45,12 +45,8 @@
     
     <button id="backToTop" title="回到最上方">↑</button>
     <script>
-const themeToggleBtn = document.getElementById('theme-toggle');
-const body = document.body;
 
-// 取得按鈕與 body
-const themeToggleBtn = document.getElementById('theme-toggle');
-const body = document.body;
+
          window.addEventListener("scroll", function ){
             const btn = document.getElementById("backToTop");
             if (window.scrollY > 300) {
@@ -66,8 +62,9 @@ const body = document.body;
         });
 </script>
     <script>
-        
-// 1. 檢查使用者之前有沒有存過設定 (LocalStorage)
+const themeToggleBtn = document.getElementById('theme-toggle');
+const body = document.body;
+
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme === 'dark') {
     body.classList.add('dark-mode');
@@ -92,6 +89,7 @@ themeToggleBtn.addEventListener('click', function() {
 
 </body>
 </html>
+
 
 
 
