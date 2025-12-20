@@ -89,9 +89,36 @@
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     </script>
+<script>
+const themeToggleBtn = document.getElementById('theme-toggle');
+const body = document.body;
+
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+    body.classList.add('dark-mode');
+    themeToggleBtn.textContent = '☀️'; // 如果是深色，按鈕顯示太陽
+}
+
+// 2. 按鈕點擊事件
+themeToggleBtn.addEventListener('click', function() {
+    // 切換 dark-mode class
+    body.classList.toggle('dark-mode');
+    
+    // 判斷目前是否為深色模式
+    if (body.classList.contains('dark-mode')) {
+        themeToggleBtn.textContent = '☀️'; // 變亮
+        localStorage.setItem('theme', 'dark'); // 記憶設定
+    } else {
+        themeToggleBtn.textContent = '🌙'; // 變暗
+        localStorage.setItem('theme', 'light'); // 記憶設定
+    }
+});
+</script>
+
 </body>
 
 </html>
+
 
 
 
